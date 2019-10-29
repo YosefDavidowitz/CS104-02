@@ -26,7 +26,6 @@ while askAgain == True:
     else:
         askAgain = False
 
-
     if richter >= 8:
         print("Most structures fall")
     elif richter >= 7:
