@@ -15,15 +15,25 @@
 # test your program several times with the following values:
 #   8.1, 8.0, 7.1, 7.0, 6.1, 6.0, 4.6, 4.5, 4,4, -4.6
 
-richter = float(input("Enter the Richter scale value: "))
+askAgain = True
+while askAgain == True:
+    richter = float(input("Enter the Richter scale value or -99 to end: "))
+    
+    if richter == -99:
+        break
+    elif richter < 0:
+        print("Value must be greater than 0")
+    else:
+        askAgain = False
 
-if richter >= 8:
-    print("Most structures fall")
-elif richter >= 7:
-    print("Many buildings are destroyed")
-elif richter >= 6:
-    print("Many buildings considerably damaged, some collapse") 
-elif richter >= 4.5:
-    print("Damge to poorly constructed buildings")
-else:
-    print("No destruction of buildings")
+
+    if richter >= 8:
+        print("Most structures fall")
+    elif richter >= 7:
+        print("Many buildings are destroyed")
+    elif richter >= 6:
+        print("Many buildings considerably damaged, some collapse") 
+    elif richter >= 4.5:
+        print("Damge to poorly constructed buildings")
+    elif richter >= 0:
+        print("No destruction of buildings")
